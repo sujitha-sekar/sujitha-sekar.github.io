@@ -1,1 +1,0 @@
-# sujitha-sekar.github.io
