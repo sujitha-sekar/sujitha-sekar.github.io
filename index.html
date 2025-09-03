@@ -4,168 +4,320 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Front-End Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Sujitha S, a Frontend Developer with 3+ years in Angular, NgRx, and responsive web design.">
+  <meta name="keywords" content="Frontend Developer, Angular, NgRx, React, Portfolio, Web Design">
+  <title>Sujitha S - Front-End Developer Portfolio</title>
   <link rel="icon" href="logo.png" type="image/png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .skill-bar {
+      height: 15px;
+      background: #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(to right, #4f46e5, #ec4899, #2dd4bf);
+      border-radius: 8px;
+      width: 0;
+      animation: grow 2s ease-in-out forwards;
+    }
+
+    @keyframes grow {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: var(--progress);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 font-sans text-gray-800">
   <!-- Header -->
-  <header class="bg-blue-600 text-white py-4 sticky top-0 shadow-md">
+  <header class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-6 sticky top-0 shadow-lg z-10">
     <nav class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-2xl font-bold">Sujitha S</h1>
+      <div class="flex items-center">
+        <img src="profile.jpeg" alt="Sujitha S" class="w-12 h-12 rounded-full mr-3">
+        <h1 class="text-2xl font-bold">Sujitha S</h1>
+      </div>
       <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#skills" class="hover:underline">Skills</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="#about" class="hover:text-teal-200 transition-colors">About</a></li>
+        <li><a href="#skills" class="hover:text-teal-200 transition-colors">Skills</a></li>
+        <li><a href="#projects" class="hover:text-teal-200 transition-colors">Projects</a></li>
+        <li><a href="#contact" class="hover:text-teal-200 transition-colors">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-blue-500 text-white py-20 text-center">
+  <section class="bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-24 text-center">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
-      <p class="text-lg mb-6">Front-End Developer | Crafting User-Friendly Web Experiences</p>
-      <a href="#projects" class="bg-white text-blue-600 px-6 py-2 rounded-full hover:bg-gray-200">View My Work</a>
+      <img src="profile.jpeg" alt="Sujitha S" class="w-40 h-40 rounded-full mx-auto mb-4 animate-bounce">
+      <h2 class="text-5xl font-bold mb-4">Welcome to My Portfolio</h2>
+      <p class="text-xl mb-6">Angular Expert | Crafting Scalable Web Solutions</p>
+      <a href="#projects" class="bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 transition-colors">View
+        My Work</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16">
+  <section id="about" class="py-20">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-        I'm a passionate Front-End Developer with 2+ years of experience building responsive and intuitive web
-        applications. Skilled in HTML, CSS, JavaScript, and modern frameworks like React, I focus on creating seamless
-        user experiences and scalable solutions. My goal is to blend creativity with technical expertise to deliver
-        impactful projects.
-      </p>
+      <h2 class="text-4xl font-bold mb-8 text-center text-indigo-800">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center max-w-5xl mx-auto">
+        <img src="profile.jpeg" alt="Sujitha S" class="w-56 h-56 rounded-lg mb-4 md:mb-0 md:mr-8 fade-in">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I’m a dedicated Front-End Developer with over 2.7 years of experience, specializing in Angular, currently
+          leveraging Angular 18 to build scalable single-page applications (SPAs). My expertise includes responsive UI
+          design with HTML5, CSS3, and JavaScript, enhanced by proficiency in Angular components, services, RxJS for
+          reactive programming, and NgRx for efficient state management. I’m skilled in TypeScript, Git for version
+          control, and Jest for testing, with hands-on experience in SEO optimization and performance-driven visual
+          effects using CSS/JS. I prioritize clean, maintainable code, ensuring cross-browser compatibility, and
+          collaborating with backend and UI/UX teams to deliver robust solutions. I’m eager to contribute my skills to a
+          dynamic environment and grow further as a full-stack or advanced front-end engineer.
+        </p>
+      </div>
+      <div class="text-center mt-6">
+        <a href="https://github.com/sujitha-sekar" target="_blank"
+          class="text-indigo-600 hover:text-pink-600 mr-4 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/sujithass501/" target="_blank"
+          class="text-indigo-600 hover:text-pink-600 transition-colors">LinkedIn</a>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="bg-gray-200 py-16">
+  <section id="skills" class="bg-gradient-to-r from-gray-100 to-teal-50 py-20">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-        <div class="bg-white p-4 rounded-lg shadow text-center">HTML5</div>
-        <div class="bg-white p-4 rounded-lg shadow text-center">CSS3</div>
-        <div class="bg-white p-4 rounded-lg shadow text-center">JavaScript</div>
-        <div class="bg-white p-4 rounded-lg shadow text-center">Angular</div>
-        <div class="bg-white p-4 rounded-lg shadow text-center">React</div>
-        <div class="bg-white p-4 rounded-lg shadow text-center">Git</div>
+      <h2 class="text-4xl font-bold mb-8 text-center text-indigo-800">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">Angular</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 90%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">90% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">TypeScript</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 90%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">90% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">JavaScript</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 75%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">75% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">HTML5</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 90%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">90% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">CSS3</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 85%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">85% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">RxJS</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 80%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">80% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">NgRx</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 70%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">70% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">Angular Material</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 90%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">90% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">npm</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 85%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">85% Proficiency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300">
+          <h4 class="text-xl font-semibold text-indigo-700">Jest</h4>
+          <div class="skill-bar mt-4">
+            <div class="skill-progress" style="--progress: 70%;"></div>
+          </div>
+          <p class="text-sm text-gray-600 mt-2">70% Proficiency</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16">
+  <section id="projects" class="py-20">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-
-      <!-- ONE grid container for all projects -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Paddle Ball</h3>
-          <p class="text-gray-700 mb-4">Build a simple paddle game using HTML, CSS, and JavaScript, allowing users to 
-            control a paddle to bounce a ball and view their score.</p>
-          </p>
+      <h2 class="text-4xl font-bold mb-8 text-center text-indigo-800">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Paddle Ball</h3>
+          <p class="text-gray-700 mb-4">A paddle game with HTML, CSS, and JavaScript, featuring score tracking and
+            optimized collision detection.</p>
           <a href="https://sujitha-sekar.github.io/paddle_ball/" target="_blank" rel="noopener noreferrer"
-            class="text-blue-500 hover:underline">View Project</a>
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Music App</h3>
-          <p class="text-gray-700 mb-4">Built a music player app with Angular, allows users to play listed music's.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 1.4s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">MPloyChek</h3>
+          <p class="text-gray-700 mb-4">An Angular-based job portal with TypeScript, featuring user and recruiter role
+            management. Integrated XML for backend data, Optimized data handling with RxJS for real-time updates.</p>
+          <a href="https://github.com/sujitha-sekar/MPloyChek" target="_blank" rel="noopener noreferrer"
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 0.2s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Music App</h3>
+          <p class="text-gray-700 mb-4">An Angular app with RxJS for real-time music playback, enhancing user
+            responsiveness.</p>
           <a href="https://sujitha-sekar.github.io/Music/music" target="_blank" rel="noopener noreferrer"
-            class="text-blue-500 hover:underline">View Project</a>
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Text Extractor</h3>
-          <p class="text-gray-700 mb-4">Built a text extractor app with HTML, CSS, and JavaScript, allows users to 
-            extract text from an image by choosing language, copy to clipboard and dowloading the extracted text.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 0.4s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Text Extractor</h3>
+          <p class="text-gray-700 mb-4">A JavaScript tool for text extraction with language options and OCR integration.
+          </p>
           <a href="https://sujitha-sekar.github.io/text-extract/" target="_blank" rel="noopener noreferrer"
-          class="text-blue-500 hover:underline">View Project</a>
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Currency Converter</h3>
-          <p class="text-gray-700 mb-4">Built a simple currency converter app with HTML, JavaScript and Tailwind CSS,
-            allowing users to convert between different currencies.</p>
-          <a href="https://sujitha-sekar.github.io/currency-converter/" target="_blank" rel="noopener noreferrer" 
-          class="text-blue-500 hover:underline">View Project</a>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 0.6s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Currency Converter</h3>
+          <p class="text-gray-700 mb-4">A converter with debounced API calls using JavaScript and Tailwind CSS.</p>
+          <a href="https://sujitha-sekar.github.io/currency-converter/" target="_blank" rel="noopener noreferrer"
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Quote Generator</h3>
-          <p class="text-gray-700 mb-4">Built a simple quote generator app with HTML, JavaScript and Tailwind CSS,
-            allowing users to generate random quotes and save them as favorites.</p>
-          <a href="https://sujitha-sekar.github.io/quote-generator/" target="_blank" rel="noopener noreferrer" 
-          class="text-blue-500 hover:underline">View Project</a>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 0.8s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Quote Generator</h3>
+          <p class="text-gray-700 mb-4">A generator with localStorage for favorites, built with JavaScript.</p>
+          <a href="https://sujitha-sekar.github.io/quote-generator/" target="_blank" rel="noopener noreferrer"
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Solar System Explorer</h3>
-          <p class="text-gray-700 mb-4">Built a solar system explorer app with HTML, JavaScript and CSS,
-            which is use to gain basic knowledge about planets, asteroids, moon, comets and star. Also 
-            allowing users to take quiz with time contrains and view the result too.</p>
-          <a href="https://sujitha-sekar.github.io/solar-explorer/" target="_blank" rel="noopener noreferrer" 
-          class="text-blue-500 hover:underline">View Project</a>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 1.0s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Solar System Explorer</h3>
+          <p class="text-gray-700 mb-4">An educational app with quizzes, built with responsive CSS layouts.</p>
+          <a href="https://sujitha-sekar.github.io/solar-explorer/" target="_blank" rel="noopener noreferrer"
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Thirukkural Verses</h3>
-          <p class="text-gray-700 mb-4">Built a Thirukkural verses app with HTML, JavaScript and Tailwind CSS,
-            allowing users to read and bookmark Thirukkural verses.</p>
-          <a href="https://sujitha-sekar.github.io/thirukkural/" target="_blank" rel="noopener noreferrer" 
-          class="text-blue-500 hover:underline">View Project</a>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover-scale transition-all duration-300 fade-in"
+          style="animation-delay: 1.2s">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Thirukkural Verses</h3>
+          <p class="text-gray-700 mb-4">A verse app with search functionality, built with JavaScript.</p>
+          <a href="https://sujitha-sekar.github.io/thirukkural/" target="_blank" rel="noopener noreferrer"
+            class="text-pink-500 hover:text-pink-700 transition-colors">View Project</a>
         </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-gray-200 py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
-      <div class="max-w-md mx-auto">
-        <div class="mb-4">
-          <input id="name" type="text" placeholder="Your Name"
-            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <input id="email" type="email" placeholder="Your Email"
-            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <textarea id="message" placeholder="Your Message" rows="4"
-            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button onclick="sendMessage()"
-          class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 w-full">Send Message</button>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gradient-to-r from-indigo-500 to-pink-500 py-20 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+      <form onsubmit="sendMessage(event)" class="max-w-md mx-auto">
+        <div class="mb-4">
+          <input id="name" type="text" placeholder="Your Name" required
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Name">
+        </div>
+        <div class="mb-4">
+          <input id="email" type="email" placeholder="Your Email" required
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Email">
+        </div>
+        <div class="mb-4">
+          <textarea id="message" placeholder="Your Message" rows="4" required
+            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            aria-label="Message"></textarea>
+        </div>
+        <button type="submit"
+          class="bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 w-full transition-colors">Send
+          Message</button>
+      </form>
+      <p class="text-center mt-4 text-sm">* Demo form.</p>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-blue-600 text-white py-4 text-center">
+  <footer class="bg-indigo-700 text-white py-4 text-center">
     <p>&copy; 2025 Sujitha S. All rights reserved.</p>
   </footer>
 
   <script>
-    function sendMessage() {
+    // Skill bar animation on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const skillBars = document.querySelectorAll('.skill-progress');
+      skillBars.forEach(bar => {
+        const progress = bar.parentElement.nextElementSibling.textContent.match(/\d+/)?.[0] || 0;
+        bar.style.setProperty('--progress', `${progress}%`);
+      });
+
+      // Fade-in animation for projects
+      const projects = document.querySelectorAll('#projects .fade-in');
+      projects.forEach((project, index) => {
+        project.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+
+    // Contact form handler
+    function sendMessage(event) {
+      event.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
       if (name && email && message) {
-        alert('Message sent! (This is a demo; no actual submission occurs.)');
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('message').value = '';
+        alert('Message sent! (Integrate EmailJS for real submission)');
+        event.target.reset();
       } else {
         alert('Please fill out all fields.');
       }
